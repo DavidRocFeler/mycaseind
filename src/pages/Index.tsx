@@ -1,11 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import HeroSection from '@/components/sections/HeroSection';
-import EvidenceSection from '@/components/sections/EvidenceSection';
-import ExtortionSection from '@/components/sections/ExtortionSection';
-import ThreatsSection from '@/components/sections/ThreatsSection';
-import NewsSection from '@/components/sections/NewsSection';
+import heroImage from '@/assets/hero-case.jpg';
 
 const Index = () => {
   const [currentLanguage, setCurrentLanguage] = useState('nl');
@@ -18,22 +15,61 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* SEO and Accessibility */}
+      <Header 
+        currentLanguage={currentLanguage}
+        onLanguageChange={handleLanguageChange}
+      />
+      
       <main className="w-full">
-        <Header 
-          currentLanguage={currentLanguage}
-          onLanguageChange={handleLanguageChange}
-        />
-        
-        {/* Main Content Sections */}
-        <HeroSection />
-        <EvidenceSection />
-        <ExtortionSection />
-        <ThreatsSection />
-        <NewsSection />
-        
-        <Footer />
+        <section className="relative min-h-screen flex items-center">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroImage})` 
+            }}
+          />
+          
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center text-white border-2 border-white/30 rounded-lg p-8 bg-black/20 backdrop-blur-sm">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Caso de Refugio
+              </h1>
+              
+              <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed border-1 border-white/20 rounded p-4 bg-white/10">
+                Presentación profesional de mi solicitud de refugio para las autoridades holandesas (IND).
+                Documentación completa y organizada de mi caso.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+                <Link to="/caso" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
+                  <h3 className="font-semibold text-lg">Mi Caso</h3>
+                  <p className="text-sm text-gray-300">Historia completa</p>
+                </Link>
+                <Link to="/pruebas" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
+                  <h3 className="font-semibold text-lg">Pruebas</h3>
+                  <p className="text-sm text-gray-300">Evidencia documentada</p>
+                </Link>
+                <Link to="/extorsion" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
+                  <h3 className="font-semibold text-lg">Extorsión</h3>
+                  <p className="text-sm text-gray-300">Cronología de eventos</p>
+                </Link>
+                <Link to="/amenazas" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
+                  <h3 className="font-semibold text-lg">Amenazas</h3>
+                  <p className="text-sm text-gray-300">Registro de amenazas</p>
+                </Link>
+                <Link to="/noticias" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
+                  <h3 className="font-semibold text-lg">Noticias</h3>
+                  <p className="text-sm text-gray-300">Contexto mediático</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+      
+      <Footer />
     </div>
   );
 };

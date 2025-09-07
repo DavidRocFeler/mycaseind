@@ -67,7 +67,7 @@ const NewsSection = () => {
           {newsArticles.map((article) => (
             <div 
               key={article.id}
-              className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl p-8 shadow-lg border-2 border-gray-200 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-6">
                 {/* Icon and Type */}
@@ -101,7 +101,7 @@ const NewsSection = () => {
                     {article.description}
                   </p>
 
-                  <div className="container-blue mb-6">
+                  <div className="container-blue mb-6 border-1 border-blue-300">
                     <h4 className="font-semibold text-primary mb-2">
                       Relevancia para mi caso:
                     </h4>
@@ -128,7 +128,7 @@ const NewsSection = () => {
 
         {/* Credibility Statement */}
         <div className="mt-16">
-          <div className="container-purple max-w-4xl mx-auto">
+          <div className="container-purple max-w-4xl mx-auto border-2 border-purple-300">
             <h3 className="text-2xl font-bold title-purple mb-6 text-center">
               Verificabilidad y Credibilidad
             </h3>

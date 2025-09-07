@@ -82,7 +82,7 @@ const EvidenceSection = () => {
 
         <div className="grid gap-6 max-w-5xl mx-auto">
           {evidenceCategories.map((category) => (
-            <div key={category.id} className="container-purple">
+            <div key={category.id} className="container-purple border-2 border-purple-300">
               <button
                 onClick={() => toggleAccordion(category.id)}
                 className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-primary rounded-lg"
@@ -126,7 +126,7 @@ const EvidenceSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <div className="container-blue max-w-2xl mx-auto">
+          <div className="container-blue max-w-2xl mx-auto border-2 border-blue-300">
             <p className="text-primary font-medium">
               <strong>Nota importante:</strong> Toda la evidencia ha sido recopilada siguiendo 
               protocolos legales apropiados y está disponible para verificación oficial por 

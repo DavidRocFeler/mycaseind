@@ -90,7 +90,7 @@ const ExtortionSection = () => {
 
                 {/* Content */}
                 <div className="ml-8 flex-1">
-                  <div className="bg-white rounded-xl p-8 shadow-lg border border-blue-border">
+                  <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-blue-border">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                       <h3 className="text-2xl font-bold title-purple mb-2 lg:mb-0">
                         {event.title}
@@ -121,7 +121,7 @@ const ExtortionSection = () => {
 
         {/* Impact Summary */}
         <div className="mt-16">
-          <div className="container-purple max-w-4xl mx-auto">
+          <div className="container-purple max-w-4xl mx-auto border-2 border-purple-300">
             <h3 className="text-2xl font-bold title-purple mb-6 text-center">
               Impacto y Consecuencias
             </h3>

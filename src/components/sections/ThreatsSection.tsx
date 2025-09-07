@@ -143,7 +143,7 @@ const ThreatsSection = () => {
 
         {/* Protection Needs Summary */}
         <div className="mt-16">
-          <div className="container-blue max-w-4xl mx-auto">
+          <div className="container-blue max-w-4xl mx-auto border-2 border-blue-300">
             <h3 className="text-2xl font-bold title-purple mb-6 text-center">
               Necesidad de Protección Internacional
             </h3>

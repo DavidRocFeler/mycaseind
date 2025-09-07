@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -15,6 +16,7 @@ interface HeaderProps {
 
 const Header = ({ currentLanguage, onLanguageChange }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const languages = [
     { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
@@ -23,18 +25,14 @@ const Header = ({ currentLanguage, onLanguageChange }: HeaderProps) => {
   ];
 
   const navigation = [
-    { name: 'Caso', href: '#caso' },
-    { name: 'Pruebas', href: '#pruebas' },
-    { name: 'Extorsión', href: '#extorsion' },
-    { name: 'Amenazas', href: '#amenazas' },
-    { name: 'Noticias', href: '#noticias' },
+    { name: 'Caso', href: '/caso' },
+    { name: 'Pruebas', href: '/pruebas' },
+    { name: 'Extorsión', href: '/extorsion' },
+    { name: 'Amenazas', href: '/amenazas' },
+    { name: 'Noticias', href: '/noticias' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -45,21 +43,23 @@ const Header = ({ currentLanguage, onLanguageChange }: HeaderProps) => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-xl font-bold title-purple">
+              <Link to="/" className="text-xl font-bold title-purple hover:text-primary transition-colors">
                 Caso de Refugio
-              </h1>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               {navigation.map((item) => (
-                <button
+                <Link
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="title-purple hover:text-primary transition-colors duration-200 font-medium"
+                  to={item.href}
+                  className={`title-purple hover:text-primary transition-colors duration-200 font-medium ${
+                    location.pathname === item.href ? 'text-primary font-bold' : ''
+                  }`}
                 >
                   {item.name}
-                </button>
+                </Link>
               ))}
             </nav>
 
@@ -76,18 +76,18 @@ const Header = ({ currentLanguage, onLanguageChange }: HeaderProps) => {
                     <ChevronDown className="ml-2 h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="bg-white">
-                  {languages.map((lang) => (
-                    <DropdownMenuItem
-                      key={lang.code}
-                      onClick={() => onLanguageChange(lang.code)}
-                      className="flex items-center space-x-2 cursor-pointer"
-                    >
-                      <span>{lang.flag}</span>
-                      <span>{lang.name}</span>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
+                 <DropdownMenuContent align="end" className="bg-white border-1 border-gray-200">
+                   {languages.map((lang) => (
+                     <DropdownMenuItem
+                       key={lang.code}
+                       onClick={() => onLanguageChange(lang.code)}
+                       className="flex items-center space-x-2 cursor-pointer"
+                     >
+                       <span>{lang.flag}</span>
+                       <span>{lang.name}</span>
+                     </DropdownMenuItem>
+                   ))}
+                 </DropdownMenuContent>
               </DropdownMenu>
 
               {/* Mobile Menu Button */}
@@ -112,13 +112,16 @@ const Header = ({ currentLanguage, onLanguageChange }: HeaderProps) => {
           <div className="absolute right-0 top-16 w-64 h-full header-bg border-l border-border">
             <nav className="flex flex-col p-6 space-y-4">
               {navigation.map((item) => (
-                <button
+                <Link
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-left py-3 px-4 title-purple hover:bg-purple-container rounded-lg transition-colors font-medium"
+                  to={item.href}
+                  onClick={closeMobileMenu}
+                  className={`text-left py-3 px-4 title-purple hover:bg-purple-container rounded-lg transition-colors font-medium border-1 border-transparent hover:border-primary ${
+                    location.pathname === item.href ? 'bg-purple-container border-1 border-primary' : ''
+                  }`}
                 >
                   {item.name}
-                </button>
+                </Link>
               ))}
             </nav>
           </div>
