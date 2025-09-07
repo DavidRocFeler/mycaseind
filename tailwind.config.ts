@@ -57,6 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Professional asylum case palette
+        "purple-title": "hsl(var(--purple-title))",
+        "purple-light": "hsl(var(--purple-light-bg))",
+        "purple-container": "hsl(var(--purple-container))",
+        "blue-container": "hsl(var(--blue-container))",
+        "blue-border": "hsl(var(--blue-border))",
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

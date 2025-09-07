@@ -8,35 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Main color palette for asylum case presentation */
+    --background: 0 0% 100%; /* White - 70% usage */
+    --foreground: 0 0% 0%; /* Black text */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Professional blue - 15% usage */
+    --primary: 221 83% 53%; /* #2563EB */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Light purple for header/footer - 5% usage */
+    --secondary: 251 91% 95%; /* #F5F3FF */
+    --secondary-foreground: 271 81% 56%; /* #9333EA */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 251 91% 95%;
+    --muted-foreground: 271 81% 56%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Blue accent containers */
+    --accent: 221 83% 53%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Purple for titles - 5% usage */
+    --destructive: 271 81% 56%; /* #9333EA */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
 
-    --radius: 0.5rem;
+    /* Purple gradient for primary buttons */
+    --gradient-primary: linear-gradient(90deg, #8B5CF6, #EC4899);
+    --gradient-secondary: linear-gradient(90deg, #7C3AED, #4F46E5);
+    
+    /* Professional purple */
+    --purple-title: 271 81% 56%; /* #9333EA */
+    --purple-light-bg: 251 91% 95%; /* #F5F3FF */
+    --purple-container: 249 86% 92%; /* #EDE9FE */
+    
+    /* Professional blue containers */
+    --blue-container: 214 95% 93%; /* #DBEAFE */
+    --blue-border: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +121,70 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Professional button variants */
+  .btn-hero {
+    @apply px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    background: var(--gradient-primary);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-medium border-2 transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+    border-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+  }
+
+  /* Professional containers */
+  .container-purple {
+    @apply rounded-xl p-6 border;
+    background-color: hsl(var(--purple-container));
+    border-color: hsl(var(--purple-title) / 0.2);
+  }
+
+  .container-blue {
+    @apply rounded-xl p-6 border;
+    background-color: hsl(var(--blue-container));
+    border-color: hsl(var(--blue-border) / 0.2);
+  }
+
+  /* Typography */
+  .title-purple {
+    color: hsl(var(--purple-title));
+  }
+
+  .text-blue {
+    color: hsl(var(--primary));
+  }
+
+  /* Header styles */
+  .header-bg {
+    background-color: hsl(var(--purple-light-bg));
+  }
+
+  /* Mobile menu animation */
+  .menu-slide-enter {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-slide-enter-active {
+    transform: translateX(0);
+  }
+
+  .menu-slide-exit {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-slide-exit-active {
+    transform: translateX(100%);
   }
 }
