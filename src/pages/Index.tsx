@@ -26,7 +26,7 @@ const Index = () => {
       />
       
       <main className="w-full">
-        <section className="relative py-[10rem] flex items-center">
+        <section className="relative py-[5rem] flex items-center">
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
