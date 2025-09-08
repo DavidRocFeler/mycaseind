@@ -151,7 +151,7 @@ const Header = ({ currentLanguage, onLanguageChange }: HeaderProps) => {
         
         {/* Panel deslizante desde la derecha */}
         <div className="absolute right-0 top-0 w-full h-full bg-white shadow-lg">
-          <nav className="flex flex-col pt-[4rem] space-y-0">
+          <nav className="flex flex-col pt-[5.2rem] overflow-y-auto space-y-0">
             {navigation.map((item) => (
               <Link
                 key={item.name}
