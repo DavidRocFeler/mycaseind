@@ -20,14 +20,7 @@ const Caso = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header 
-        currentLanguage={currentLanguage}
-        onLanguageChange={handleLanguageChange}
-      />
-      
       <HeroSection casoData={casoData} />
-      
-      <Footer />
     </div>
   );
 };

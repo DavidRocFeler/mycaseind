@@ -14,22 +14,11 @@ const Pruebas = () => {
     setCurrentLanguage(lang);
   };
 
-  const handleDownloadPDF = () => {
-    console.log('Downloading Pruebas PDF...');
-  };
-
   return (
     <div className="min-h-screen bg-background">
-      <Header 
-        currentLanguage={currentLanguage}
-        onLanguageChange={handleLanguageChange}
-      />
-      
       <HeroSection casoData={pruebasData} />
 
-      <EvidenceSection />
-      
-      <Footer />
+      <EvidenceSection />      
     </div>
   );
 };

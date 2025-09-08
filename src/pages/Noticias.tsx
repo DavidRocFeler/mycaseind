@@ -14,19 +14,10 @@ const Noticias = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header 
-        currentLanguage={currentLanguage}
-        onLanguageChange={handleLanguageChange}
-      />
-      
-        
+    <div className="min-h-screen bg-background">      
       <HeroSection casoData={newsData} />
 
       <NewsSection />
-      
-      
-      <Footer />
     </div>
   );
 };
