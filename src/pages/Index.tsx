@@ -26,7 +26,7 @@ const Index = () => {
       />
       
       <main className="w-full">
-        <section className="relative min-h-screen flex items-center">
+        <section className="relative py-[10rem] flex items-center">
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -42,7 +42,7 @@ const Index = () => {
                 Caso de Refugio
               </h1>
               
-              <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed border-1 border-white/20 rounded p-4 bg-white/10">
+              <p className="text-md md:text-2xl lg:text-3xl mb-8 text-gray-200 leading-relaxed border-1 border-white/20 rounded p-4 bg-white/10">
                 Presentación profesional de mi solicitud de refugio para las autoridades holandesas (IND).
                 Documentación completa y organizada de mi caso.
               </p>
