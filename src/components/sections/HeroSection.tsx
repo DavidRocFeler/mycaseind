@@ -26,7 +26,7 @@ const HeroSection = ({ casoData }: HeroSectionProps) => {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center text-white border-2 border-white/30 rounded-lg p-8 bg-black/20 backdrop-blur-sm">
-            <p className="text-sm md:text-2xl lg:text-3xl text-gray-200 leading-relaxed p-4 bg-white/10 rounded">
+            <p className="text-md md:text-2xl lg:text-3xl text-gray-200 leading-relaxed p-4 bg-white/10 rounded">
               {caso.descripcion}
             </p>
           </div>
