@@ -13,6 +13,11 @@ const Index = () => {
     console.log(`Language changed to: ${lang}`);
   };
 
+  // Función para scroll al top al navegar
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header 
@@ -43,23 +48,43 @@ const Index = () => {
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-                <Link to="/caso" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
+                <Link 
+                  to="/caso" 
+                  onClick={scrollToTop}
+                  className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors"
+                >
                   <h3 className="font-semibold text-lg">Mi Caso</h3>
                   <p className="text-sm text-gray-300">Historia completa</p>
                 </Link>
-                <Link to="/pruebas" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
+                <Link 
+                  to="/pruebas" 
+                  onClick={scrollToTop}
+                  className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors"
+                >
                   <h3 className="font-semibold text-lg">Pruebas</h3>
                   <p className="text-sm text-gray-300">Evidencia documentada</p>
                 </Link>
-                <Link to="/extorsion" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
+                <Link 
+                  to="/extorsion" 
+                  onClick={scrollToTop}
+                  className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors"
+                >
                   <h3 className="font-semibold text-lg">Extorsión</h3>
                   <p className="text-sm text-gray-300">Cronología de eventos</p>
                 </Link>
-                <Link to="/amenazas" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
-                  <h3 className="font-semibold text-lg">Amenazas</h3>
-                  <p className="text-sm text-gray-300">Registro de amenazas</p>
+                <Link 
+                  to="/peligros" 
+                  onClick={scrollToTop}
+                  className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors"
+                >
+                  <h3 className="font-semibold text-lg">Peligros</h3>
+                  <p className="text-sm text-gray-300">Riesgo y peligros de vida</p>
                 </Link>
-                <Link to="/noticias" className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors">
+                <Link 
+                  to="/noticias" 
+                  onClick={scrollToTop}
+                  className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors"
+                >
                   <h3 className="font-semibold text-lg">Noticias</h3>
                   <p className="text-sm text-gray-300">Contexto mediático</p>
                 </Link>

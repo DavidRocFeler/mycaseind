@@ -38,26 +38,17 @@ const NewsSection = () => {
   ];
 
   const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'Informe Oficial':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'Cobertura Mediática':
-        return 'bg-green-100 text-green-800 border-green-200';
-      case 'Informe de ONG':
-        return 'bg-purple-100 text-purple-800 border-purple-200';
-      default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
+    return 'border-2 border-black';
   };
 
   return (
-    <section id="noticias" className="py-20 bg-purple-light">
+    <section id="noticias" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold title-purple mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#45246E' }}>
             Contexto y Noticias
           </h2>
-          <p className="text-xl text-foreground max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto" style={{ color: '#0E0E0E' }}>
             Documentación externa que contextualiza mi caso dentro del panorama general de la situación 
             en mi país de origen, proporcionando evidencia independiente de las condiciones que motivaron mi solicitud.
           </p>
@@ -67,15 +58,15 @@ const NewsSection = () => {
           {newsArticles.map((article) => (
             <div 
               key={article.id}
-              className="bg-white rounded-xl p-8 shadow-lg border-2 border-gray-200 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white p-8 border-2 border-black"
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-6">
                 {/* Icon and Type */}
                 <div className="flex items-center space-x-4 mb-6 lg:mb-0 lg:flex-col lg:items-center lg:space-x-0 lg:space-y-4 lg:w-32">
-                  <div className="p-4 bg-primary rounded-lg">
-                    <article.icon className="h-8 w-8 text-white" />
+                  <div className="p-5">
+                    <article.icon className="h-10 w-10" style={{ color: 'white', backgroundColor: '#45246E', padding: '5px' }} />
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getTypeColor(article.type)}`}>
+                  <span className={`px-3 py-1 text-xs font-medium ${getTypeColor(article.type)}`} style={{ color: '#45246E', backgroundColor: 'white' }}>
                     {article.type}
                   </span>
                 </div>
@@ -83,42 +74,42 @@ const NewsSection = () => {
                 {/* Content */}
                 <div className="flex-1">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                    <h3 className="text-2xl font-bold title-purple mb-2 lg:mb-0 lg:flex-1 lg:pr-4">
+                    <h3 className="text-2xl font-bold mb-2 lg:mb-0 lg:flex-1 lg:pr-4" style={{ color: '#45246E' }}>
                       {article.title}
                     </h3>
-                    <div className="text-sm text-primary font-medium">
+                    <div className="text-sm font-medium" style={{ color: '#45246E' }}>
                       {article.date}
                     </div>
                   </div>
 
                   <div className="mb-4">
-                    <p className="text-sm font-medium text-foreground">
+                    <p className="text-sm font-medium" style={{ color: '#0E0E0E' }}>
                       <strong>Fuente:</strong> {article.source}
                     </p>
                   </div>
 
-                  <p className="text-foreground text-lg mb-6 leading-relaxed">
+                  <p className="text-lg mb-6 leading-relaxed" style={{ color: '#0E0E0E' }}>
                     {article.description}
                   </p>
 
-                  <div className="container-blue mb-6 border-1 border-blue-300">
-                    <h4 className="font-semibold text-primary mb-2">
+                  <div className="bg-white border-2 border-black p-4 mb-6">
+                    <h4 className="font-semibold mb-2" style={{ color: '#45246E' }}>
                       Relevancia para mi caso:
                     </h4>
-                    <p className="text-sm text-foreground">
+                    <p className="text-sm" style={{ color: '#0E0E0E' }}>
                       {article.relevance}
                     </p>
                   </div>
 
                   <button 
-                    className="inline-flex items-center space-x-2 text-primary hover:text-purple-title transition-colors font-medium"
+                    className="inline-flex items-center space-x-2 font-medium border-2 border-black px-4 py-2 rounded-lg bg-white hover:bg-gray-50 transition-colors"
+                    style={{ color: '#45246E' }}
                     onClick={() => {
-                      // In a real implementation, this would open the actual document/link
                       alert('En una implementación completa, esto abriría el documento o enlace original.');
                     }}
                   >
                     <span>Ver documento completo</span>
-                    <ExternalLink className="h-4 w-4" />
+                    <ExternalLink className="h-4 w-4" style={{ color: '#45246E' }} />
                   </button>
                 </div>
               </div>
@@ -128,13 +119,13 @@ const NewsSection = () => {
 
         {/* Credibility Statement */}
         <div className="mt-16">
-          <div className="container-purple max-w-4xl mx-auto border-2 border-purple-300">
-            <h3 className="text-2xl font-bold title-purple mb-6 text-center">
+          <div className="bg-white max-w-4xl mx-auto border-2 border-black p-8">
+            <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: '#45246E' }}>
               Verificabilidad y Credibilidad
             </h3>
             
             <div className="prose max-w-none text-center">
-              <p className="text-foreground font-medium leading-relaxed mb-6">
+              <p className="font-medium leading-relaxed mb-6" style={{ color: '#0E0E0E' }}>
                 Todas las fuentes documentales aquí referenciadas son de dominio público y pueden ser 
                 verificadas independientemente por las autoridades del IND. Esta documentación externa 
                 refuerza la credibilidad de mi testimonio personal al demostrar que los eventos descritos 
@@ -143,8 +134,8 @@ const NewsSection = () => {
               
               <div className="grid md:grid-cols-2 gap-6 mt-8">
                 <div className="text-left">
-                  <h4 className="font-semibold title-purple mb-3">Fuentes Verificables:</h4>
-                  <ul className="space-y-2 text-sm text-foreground">
+                  <h4 className="font-semibold mb-3" style={{ color: '#45246E' }}>Fuentes Verificables:</h4>
+                  <ul className="space-y-2 text-sm" style={{ color: '#0E0E0E' }}>
                     <li>• Informes de organizaciones internacionales</li>
                     <li>• Cobertura mediática de fuentes reconocidas</li>
                     <li>• Documentación de ONGs establecidas</li>
@@ -153,8 +144,8 @@ const NewsSection = () => {
                 </div>
                 
                 <div className="text-left">
-                  <h4 className="font-semibold title-purple mb-3">Estándares de Evidencia:</h4>
-                  <ul className="space-y-2 text-sm text-foreground">
+                  <h4 className="font-semibold mb-3" style={{ color: '#45246E' }}>Estándares de Evidencia:</h4>
+                  <ul className="space-y-2 text-sm" style={{ color: '#0E0E0E' }}>
                     <li>• Fuentes independientes y diversas</li>
                     <li>• Correspondencia temporal con mi caso</li>
                     <li>• Relevancia geográfica específica</li>
