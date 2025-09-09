@@ -83,7 +83,7 @@ const Index = ({ currentLanguage }: IndexProps) => {
                     {indexData.cards.peligros.description[currentLanguage]}
                   </p>
                 </Link>
-                <Link 
+                {/* <Link 
                   to="/noticias" 
                   onClick={scrollToTop}
                   className="bg-white/10 hover:bg-white/20 border-1 border-white/30 rounded-lg p-4 transition-colors"
@@ -94,7 +94,7 @@ const Index = ({ currentLanguage }: IndexProps) => {
                   <p className="text-sm text-gray-300">
                     {indexData.cards.noticias.description[currentLanguage]}
                   </p>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

@@ -69,14 +69,14 @@ const App = () => {
                 <Peligros currentLanguage={currentLanguage} />
               </Layout>
             } />
-            <Route path="/noticias" element={
+            {/* <Route path="/noticias" element={
               <Layout 
                 currentLanguage={currentLanguage}
                 onLanguageChange={handleLanguageChange}
               >
                 <Noticias currentLanguage={currentLanguage} />
               </Layout>
-            } />
+            } /> */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={
               <Layout 
