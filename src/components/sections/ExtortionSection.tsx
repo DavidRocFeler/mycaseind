@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Clock, DollarSign, MapPin, Phone, Download } from 'lucide-react';
+import { Clock, DollarSign, MapPin, Phone, Download, LucideIcon } from 'lucide-react';
 import { extortionData } from '@/mock/extortion.mock';
 import jsPDF from 'jspdf';
 
@@ -120,19 +120,33 @@ const ExtortionSection = ({ currentLanguage }: ExtortionSectionProps) => {
             </h3>
             
             <div className="grid md:grid-cols-3 gap-6">
-              {extortionData.impactItems.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="h-10 w-10" style={{ color: 'white', backgroundColor: '#45246E', padding: '5px' }} />
+              {extortionData.impactItems.map((item, index) => {
+                const IconComponent = item.icon as React.ComponentType<{ 
+                  className?: string; 
+                  style?: React.CSSProperties;
+                }>;
+                
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <IconComponent 
+                        className="h-10 w-10" 
+                        style={{ 
+                          color: 'white', 
+                          backgroundColor: '#45246E', 
+                          padding: '5px' 
+                        }} 
+                      />
+                    </div>
+                    <h4 className="font-semibold mb-2" style={{ color: '#45246E' }}>
+                      {item.title[currentLanguage]}
+                    </h4>
+                    <p className="text-sm" style={{ color: '#0E0E0E' }}>
+                      {item.description[currentLanguage]}
+                    </p>
                   </div>
-                  <h4 className="font-semibold mb-2" style={{ color: '#45246E' }}>
-                    {item.title[currentLanguage]}
-                  </h4>
-                  <p className="text-sm" style={{ color: '#0E0E0E' }}>
-                    {item.description[currentLanguage]}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

@@ -28,12 +28,12 @@ export const evidenceData: EvidenceData = {
       items: {
         es: [
           'Registros de propiedad del edificio multifamiliar',
-          'Documento de identidad peruano (DNI 77097234)',
+          'Documento de identidad peruano',
           'Certificado médico del padre con Alzheimer',
         ],
         nl: [
           'Eigendomsregistraties van het multifunctionele gebouw',
-          'Peruaans identiteitsdocument (DNI 77097234)',
+          'Peruaans identiteitsdocument',
           'Medisch certificaat van vader met Alzheimer',
         ]
       }
