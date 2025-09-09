@@ -7,9 +7,11 @@ const Peligros = ({currentLanguage}: LanChange) => {
 
   return (
     <div className="min-h-screen bg-background">        
-      <HeroSection casoData={peligrosData} />
+      <HeroSection currentLanguage={currentLanguage} casoData={peligrosData} />
 
-      <ThreatsSection />
+      <ThreatsSection 
+      currentLanguage={currentLanguage} 
+      />
     </div>
   );
 };

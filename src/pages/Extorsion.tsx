@@ -7,9 +7,11 @@ const Extorsion = ({currentLanguage}: LanChange) => {
 
   return (
     <div className="min-h-screen bg-background">       
-      <HeroSection casoData={extorcionData} />
+      <HeroSection currentLanguage={currentLanguage} casoData={extorcionData} />
 
-      <ExtortionSection />    
+      <ExtortionSection 
+      currentLanguage={currentLanguage}
+      />    
     </div>
   );
 };

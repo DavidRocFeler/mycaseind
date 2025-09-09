@@ -7,7 +7,7 @@ const Noticias = ({currentLanguage}: LanChange) => {
 
   return (
     <div className="min-h-screen bg-background">      
-      <HeroSection casoData={newsData} />
+      <HeroSection  currentLanguage={currentLanguage} casoData={newsData} />
 
       <NewsSection />
     </div>

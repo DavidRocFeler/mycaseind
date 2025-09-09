@@ -2,9 +2,10 @@ import { CasoData } from '@/types/caso.type';
 
 interface HeroSectionProps {
   casoData: CasoData[];
+  currentLanguage: 'es' | 'nl'; // Agregar esta prop
 }
 
-const HeroSection = ({ casoData }: HeroSectionProps) => {
+const HeroSection = ({ casoData, currentLanguage }: HeroSectionProps) => {
   // Tomamos el primer elemento del array (asumiendo que solo hay uno)
   const caso = casoData[0];
 
@@ -27,14 +28,14 @@ const HeroSection = ({ casoData }: HeroSectionProps) => {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center text-white border-2 border-white/30 rounded-lg p-8 bg-black/20 backdrop-blur-sm">
             <p className="text-md md:text-2xl lg:text-3xl text-gray-200 leading-relaxed p-4 bg-white/10 rounded">
-              {caso.descripcion}
+              {caso.descripcion[currentLanguage]}
             </p>
           </div>
         </div>
 
         <div className='absolute w-[100%] lg:w-[50%] flex justify-center items-center px-10 bg-[#45246E] bottom-0 h-[15rem]'>
           <p className='text-white text-[2rem] sm:text-[2.5rem] font-extralight leading-8 sm:leading-10 md:leading-[3rem]'>
-            {caso.textoBanner}
+            {caso.textoBanner[currentLanguage]}
           </p>
         </div>
       </section>

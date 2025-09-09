@@ -65,11 +65,11 @@ const Header = ({ currentLanguage, onLanguageChange }: HeaderProps) => {
     <>
       <header className={`sticky z-50 header-bg border-[#EFE1F4] border-b border-borde bg-white flex flex-col transition-all duration-500 ease-in-out ${getHeaderPositionClass()}`}>
         {!isMobileView && (
-          <div id='hiddenDiv'>
+          <div id='hiddenDiv' className='flex justify-center pb-4'>
             <Link 
               onClick={scrollToTop}
               to='/'
-              className='flex justify-center pb-4'
+              className=''
             >
               <img className='w-[15rem]' src={Logo} alt={headerData.logoAlt[currentLanguage]} />
             </Link>

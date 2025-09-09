@@ -131,7 +131,7 @@ const MyCase = ({ currentLanguage }: MyCaseProps) => {
 
         <div className="grid gap-6 max-w-5xl mx-auto">
           {sections.map((section) => (
-            <div key={section.id} className="bg-white border-2 border-black">
+            <div key={section.id} className="bg-white w-[100%] border-2 border-black">
               <button
                 onClick={() => toggleAccordion(section.id)}
                 className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-[#45246E] rounded-lg"
@@ -141,7 +141,7 @@ const MyCase = ({ currentLanguage }: MyCaseProps) => {
                     <section.icon className="h-10 w-10" style={{ color: 'white', backgroundColor: '#45246E', padding: '5px'}} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold" style={{ color: '#45246E' }}>
+                    <h3 className="text-md sm:text-xl font-semibold" style={{ color: '#45246E' }}>
                       {section.title}
                     </h3>
                   </div>
@@ -154,8 +154,8 @@ const MyCase = ({ currentLanguage }: MyCaseProps) => {
               </button>
 
               {openAccordion === section.id && (
-                <div className="px-6 pb-6 animate-fade-in">
-                  <div className="pl-16">
+                <div className="px-6 bg pb-6 animate-fade-in">
+                  <div className="">
                     <div className="space-y-4">
                       {section.content.map((paragraph, index) => (
                         <p key={index} className="text-foreground leading-relaxed" style={{ color: '#0E0E0E' }}>

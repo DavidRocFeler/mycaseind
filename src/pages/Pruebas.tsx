@@ -7,9 +7,11 @@ const Pruebas = ({currentLanguage}: LanChange) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <HeroSection casoData={pruebasData} />
+      <HeroSection currentLanguage={currentLanguage} casoData={pruebasData} />
 
-      <EvidenceSection />      
+      <EvidenceSection 
+      currentLanguage={currentLanguage} 
+      />      
     </div>
   );
 };

@@ -1,12 +1,21 @@
-import { CasoData } from '@/types/caso.type';
-import heroImage from '@/assets/hero-case.jpg';
+import { CasoDataArray } from "@/types/caso.type";
+import caseImage from '@/assets/hero-case.jpg'
 
-export const casoData: CasoData[] = [
+export const casoData: CasoDataArray = [
   {
     id: '1',
-    titulo: 'Mi Caso: Buscando Justicia y Seguridad',
-    descripcion: 'Una presentación completa y organizada de mi solicitud de refugio, demostrando la necesidad real de protección internacional y documentando cada aspecto de mi caso con evidencia verificable.',
-    imagenUrl: heroImage,
-    textoBanner: 'Mi Caso: Buscando Justicia y Seguridad'
+    titulo: {
+      es: "Mi Caso de Refugio",
+      nl: "Mijn Asielzaak"
+    },
+    descripcion: {
+      es: "Presentación completa de mi solicitud de refugio basada en persecución por grupos criminales organizados. Documentación detallada de extorsiones, amenazas de muerte y la imposibilidad de protección estatal en Perú.",
+      nl: "Volledige presentatie van mijn asielverzoek gebaseerd op vervolging door georganiseerde criminele groepen. Gedetailleerde documentatie van afpersing, doodsbedreigingen en de onmogelijkheid van staatsbescherming in Peru."
+    },
+    imagenUrl: caseImage,
+    textoBanner: {
+      es: "Solicitud de protección internacional por persecución criminal organizada",
+      nl: "Verzoek om internationale bescherming wegens vervolging door georganiseerde criminaliteit"
+    }
   }
 ];

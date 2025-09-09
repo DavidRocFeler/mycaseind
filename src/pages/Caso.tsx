@@ -5,11 +5,9 @@ import MyCase from '@/components/sections/MyCase';
 import { LanChange } from '@/types/lan.type';
 
 const Caso = ({ currentLanguage }: LanChange) => {
-  // Especifica explícitamente el tipo 'nl' | 'es'
-
   return (
     <div className="min-h-screen bg-background">
-      <HeroSection casoData={casoData} />
+      <HeroSection casoData={casoData} currentLanguage={currentLanguage} />
       <MyCase currentLanguage={currentLanguage} />
     </div>
   );
