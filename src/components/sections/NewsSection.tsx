@@ -18,7 +18,7 @@ const NewsSection = () => {
       title: 'Testimonio de Casos Similares en Medios Internacionales',
       source: 'Agencias de Noticias Internacionales',
       date: '2023',
-      type: 'Cobertura Mediática',
+      type: 'Mediática',
       description: 'Artículos periodísticos que documentan casos similares de extorsión y amenazas en la misma región geográfica durante el mismo período.',
       relevance: 'Demuestra que mi caso no es aislado sino parte de un patrón regional documentado',
       icon: Newspaper,
@@ -58,17 +58,17 @@ const NewsSection = () => {
           {newsArticles.map((article) => (
             <div 
               key={article.id}
-              className="bg-white p-8 border-2 border-black"
+              className="bg-white p-8 border-2 border-black "
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-6">
                 {/* Icon and Type */}
                 <div className="flex items-center space-x-4 mb-6 lg:mb-0 lg:flex-col lg:items-center lg:space-x-0 lg:space-y-4 lg:w-32">
-                  <div className="p-5">
+                  <div className="p-5 ">
                     <article.icon className="h-10 w-10" style={{ color: 'white', backgroundColor: '#45246E', padding: '5px' }} />
                   </div>
-                  <span className={`px-3 py-1 text-xs font-medium ${getTypeColor(article.type)}`} style={{ color: '#45246E', backgroundColor: 'white' }}>
-                    {article.type}
-                  </span>
+                    <span className={`w-full flex items-center justify-center px-0 py-1 text-xs font-medium  ${getTypeColor(article.type)}`} style={{ color: '#45246E', backgroundColor: 'white' }}>
+                      {article.type}
+                    </span>
                 </div>
 
                 {/* Content */}

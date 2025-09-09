@@ -14,8 +14,8 @@ export const casoData: CasoDataArray = [
     },
     imagenUrl: caseImage,
     textoBanner: {
-      es: "Solicitud de protección internacional por persecución criminal organizada",
-      nl: "Verzoek om internationale bescherming wegens vervolging door georganiseerde criminaliteit"
+      es: "Solicitud de Asilo en  Nederland",
+      nl: "Asiel aanvraag in Nederland"
     }
   }
 ];

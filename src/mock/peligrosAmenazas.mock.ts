@@ -109,12 +109,12 @@ export const threatsData: ThreatsData = {
         nl: "Intimidatie en Surveillance"
       },
       date: {
-        es: "Juni 2023",
-        nl: "Juni 2023"
+        es: "Juli 2023",
+        nl: "Juli 2023"
       },
       source: {
-        es: "Operadores locales de los grupos",
-        nl: "Lokale operatoren van de groepen"
+        es: "Mismos grupos criminales",
+        nl: "Zelfde criminele groepen"
       },
       severity: {
         es: "Alta",
@@ -127,11 +127,11 @@ export const threatsData: ThreatsData = {
       details: {
         es: [
           "Vehículos desconocidos estacionados cerca de casa",
-          "Seguimiento a pie en espacios públicos",
+          "Seguimiento a pie cerca a mi domicilio",
         ],
         nl: [
           "Onbekende voertuigen geparkeerd nabij huis",
-          "Voetvolging in openbare ruimtes",
+          "Voetvolging nabij mijn woning",
         ]
       },
       icon: "Shield"

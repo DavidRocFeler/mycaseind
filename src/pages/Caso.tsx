@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import HeroSection from '@/components/sections/HeroSection';
 import { casoData } from '@/mock/caso.mock';
 import MyCase from '@/components/sections/MyCase';
