@@ -46,12 +46,12 @@ export const headerData: HeaderData = {
       }, 
       href: '/peligros' 
     },
-    { 
-      name: { 
-        es: "Noticias", 
-        nl: "Nieuws" 
-      }, 
-      href: '/noticias' 
-    }
+    // { 
+    //   name: { 
+    //     es: "Noticias", 
+    //     nl: "Nieuws" 
+    //   }, 
+    //   href: '/noticias' 
+    // }
   ]
 };
