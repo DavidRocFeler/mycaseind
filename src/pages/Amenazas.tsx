@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import ThreatsSection from '@/components/sections/ThreatsSection';
 import HeroSection from '@/components/sections/HeroSection';
 import { peligrosData } from '@/mock/peligros.mock';
+import { LanChange } from '@/types/lan.type';
 
-const Peligros = () => {
-  const [currentLanguage, setCurrentLanguage] = useState('nl');
+const Peligros = ({currentLanguage}: LanChange) => {
 
   return (
     <div className="min-h-screen bg-background">        

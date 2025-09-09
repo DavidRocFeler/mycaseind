@@ -1,26 +1,16 @@
-import { Download } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import heroImage from '@/assets/hero-case.jpg';
 import { useState } from 'react';
 import HeroSection from '@/components/sections/HeroSection';
 import { casoData } from '@/mock/caso.mock';
+import MyCase from '@/components/sections/MyCase';
+import { LanChange } from '@/types/lan.type';
 
-const Caso = () => {
-  const [currentLanguage, setCurrentLanguage] = useState('nl');
-
-  const handleLanguageChange = (lang: string) => {
-    setCurrentLanguage(lang);
-  };
-
-  const handleDownloadPDF = () => {
-    // Simulate PDF download
-    console.log('Downloading Caso PDF...');
-  };
+const Caso = ({ currentLanguage }: LanChange) => {
+  // Especifica explícitamente el tipo 'nl' | 'es'
 
   return (
     <div className="min-h-screen bg-background">
       <HeroSection casoData={casoData} />
+      <MyCase currentLanguage={currentLanguage} />
     </div>
   );
 };
