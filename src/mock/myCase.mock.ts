@@ -80,25 +80,25 @@ export const myCaseData: MyCaseData = {
         nl: "Escalatie van de Dreiging: Criminele Alliantie en Fysieke Nabijheid"
       },
       content: {
-        es: [
+       "es": [
           "La situación se agravó críticamente cuando comenzó una obra de una construcción de una escuela en julio del 2023 directamente frente a mi domicilio.",
-          "Pronto se supo en el vecindario que este grupo criminal del Tren de Aragua estaba extorsionando a los ingenieros de la obra para colocar a su gente y cobrar comisiones por los puestos de trabajo.",
+          "Pronto hubo rumores en el vecindario que el grupo criminal denominado 'el Tren de Aragua' estaba extorsionando a los ingenieros de la obra para colocar a su gente y cobrar comisiones por los puestos de trabajo.",
           "Al establecerse físicamente al frente de mi casa, su capacidad para vigilarme se intensificó exponencialmente.",
           "Podían observar constantemente con quién vivía, mis horarios, cuándo salía y cuándo regresaba.",
           "De esta forma tuve que volver a pagar nuevamente para que no intenten atentar mi vida.",
-          "Al pasar los dias Noté que dentro de la obra operaba tambien la mafia local que ha controlado mi urbanización desde que nací, la cual no solo trafica con drogas y venta de armas, sino que también controla los 'cupos' en los sindicatos de construcción.",
+          "Al pasar los dias noté que dentro de la obra operaba tambien la mafia local que ha controlado mi urbanización desde que nací, la cual no solo trafica con drogas y venta de armas, sino que también controla los 'cupos' en los sindicatos de construcción.",
           "Fue entonces cuando vinculé que el Tren de Aragua y la mafia de mi barrio habían formado una alianza.",
           "Esto explicaba por qué tenían información tan detallada sobre mí: la mafia local proporcionaba los datos y el grupo venezolano ejecutaba la extorsión."
         ],
-        nl: [
-          "De situatie verslechterde kritiek toen in juli 2023 recht voor mijn woning een bouwwerk van een school begon.",
-          "Al snel werd in de buurt bekend dat deze criminele groep van de Tren de Aragua de ingenieurs van de bouwplaats afperste om hun mensen te plaatsen en commissies te innen voor de banen.",
-          "Door zich fysiek voor mijn huis te vestigen, intensiveerde hun vermogen om mij in de gaten te houden exponentieel.",
-          "Ze konden constant observeren met wie ik woonde, mijn schema's, wanneer ik wegging en wanneer ik terugkwam.",
-          "Op deze manier moest ik opnieuw betalen om te voorkomen dat ze mijn leven zouden proberen aan te tasten.",
-          "Na verloop van dagen merkte ik dat binnen de bouwplaats ook de lokale maffia opereerde die mijn wijk controleert sinds ik geboren ben, die niet alleen handelt in drugs en wapenverkoop, maar ook de 'bijdragen' in de bouwvakbonden controleert.",
-          "Het was toen dat ik verbond dat de Tren de Aragua en de maffia in mijn buurt een alliantie hadden gevormd.",
-          "Dit verklaarde waarom ze zulke gedetailleerde informatie over mij hadden: de lokale maffia verstrekte de gegevens en de Venezolaanse groep voerde de afpersing uit."
+        "nl": [
+          "De situatie verergerde toen in juli 2023 direct tegenover mijn domicilio een werk van een constructie van een school begon.",
+          "Snel waren er geruchten in de buurt dat de criminele groep genaamd 'de Tren de Aragua' de ingenieurs van het werk aan het afpersen was om hun mensen te plaatsen en commissies te innen voor de banen.",
+          "Zich fysiek te vestigen tegenover mijn huis, hun capaciteit om mij te bewaken intensiveerde exponentieel.",
+          "Zij konden constant observeren met wie ik leefde, mijn schema's, wanneer ik wegging en wanneer ik terugkwam.",
+          "Op deze manier moest ik opnieuw betalen opdat zij niet proberen mijn leven aan te tasten.",
+          "Na de dagen voorbij te gaan merkte ik dat binnen het werk ook de lokale maffia opereerde die mijn urbanisatie controleert sinds ik geboren ben, die niet alleen handelt met drugs en verkoop van wapens, maar die ook de 'cupos' in de syndicaten van constructie controleert.",
+          "Het was toen dat ik verbond dat de Tren de Aragua en de maffia van mijn buurt een alliantie hadden gevormd.",
+          "Dit verklaarde waarom zij zo gedetailleerde informatie over mij hadden: de lokale maffia verschafte de data en de Venezolaanse groep executeerde de afpersing."
         ]
       }
     },
